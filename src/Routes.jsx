@@ -8,6 +8,7 @@ import HomeDashboard from './pages/home-dashboard';
 import SuburbSelectionMapView from './pages/suburb-selection-map-view';
 import TradieProfileQuoteRequest from './pages/tradie-profile-quote-request';
 import AdminVettingDashboard from './pages/admin-vetting-dashboard';
+import PriceEstimator from './pages/price-estimator';
 
 const Routes = () => {
   return (
@@ -20,8 +21,10 @@ const Routes = () => {
             <Route path="/" element={<HomeDashboard />} />
             <Route path="/home-dashboard" element={<HomeDashboard />} />
             <Route path="/suburb-selection-map-view" element={<SuburbSelectionMapView />} />
+            <Route path="/suburb-selection" element={<SuburbSelectionMapView />} />
             <Route path="/tradie-profile-quote-request" element={<TradieProfileQuoteRequest />} />
             <Route path="/admin-vetting-dashboard" element={<AdminVettingDashboard />} />
+            <Route path="/price-estimator" element={<PriceEstimator />} />
             <Route path="*" element={<NotFound />} />
           </RouterRoutes>
         </RoleContextProvider>

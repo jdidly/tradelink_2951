@@ -379,8 +379,79 @@ const HomeDashboard = () => {
               </div>
             </div>
 
+            {/* Price Estimator Feature - New Section */}
+            <div className="bg-gradient-to-br from-success/10 to-primary/10 border border-success/20 rounded-lg p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-success rounded-lg flex items-center justify-center">
+                    <Icon name="Calculator" size={24} color="white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">AI Price Estimator</h3>
+                    <p className="text-muted-foreground">Get instant pricing estimates powered by Gemini AI</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2 text-sm">
+                  <Icon name="Sparkles" size={16} className="text-success" />
+                  <span className="text-success font-medium">New Feature</span>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-success/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Icon name="MessageSquare" size={20} className="text-success" />
+                  </div>
+                  <h4 className="font-medium text-foreground mb-1">Describe Your Job</h4>
+                  <p className="text-sm text-muted-foreground">Tell our AI what you need done</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-success/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Icon name="Brain" size={20} className="text-success" />
+                  </div>
+                  <h4 className="font-medium text-foreground mb-1">AI Analysis</h4>
+                  <p className="text-sm text-muted-foreground">Smart pricing with local data</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-success/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Icon name="DollarSign" size={20} className="text-success" />
+                  </div>
+                  <h4 className="font-medium text-foreground mb-1">Instant Estimate</h4>
+                  <p className="text-sm text-muted-foreground">Get price range in seconds</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button
+                  iconName="Calculator"
+                  iconPosition="left"
+                  onClick={() => navigate('/price-estimator')}
+                  className="flex-1"
+                >
+                  Get Price Estimate
+                </Button>
+                <Button
+                  variant="outline"
+                  iconName="ArrowRight"
+                  iconPosition="right"
+                  onClick={() => navigate('/price-estimator')}
+                  className="sm:w-auto"
+                >
+                  Learn More
+                </Button>
+              </div>
+            </div>
+
             {/* Quick Actions - Updated */}
             <div className="flex flex-wrap gap-4 justify-center">
+              <Button
+                variant="outline"
+                iconName="Calculator"
+                iconPosition="left"
+                onClick={() => navigate('/price-estimator')}
+              >
+                Price Estimator
+              </Button>
               <Button
                 variant="outline"
                 iconName="Map"
@@ -415,29 +486,36 @@ const HomeDashboard = () => {
               </Button>
             </div>
 
-            {/* How It Works */}
+            {/* How It Works - Updated */}
             <div className="bg-card border border-border rounded-lg p-6">
               <h3 className="text-lg font-semibold text-foreground mb-6">How TradeLink Works</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Calculator" size={24} color="white" />
+                  </div>
+                  <h4 className="font-medium text-foreground mb-2">1. Get Price Estimate</h4>
+                  <p className="text-sm text-muted-foreground">Use AI to estimate job costs instantly</p>
+                </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon name="Search" size={24} color="white" />
                   </div>
-                  <h4 className="font-medium text-foreground mb-2">1. Browse Tradies</h4>
+                  <h4 className="font-medium text-foreground mb-2">2. Browse Tradies</h4>
                   <p className="text-sm text-muted-foreground">Select your suburb and browse up to 5 vetted tradies per category</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon name="Eye" size={24} color="white" />
                   </div>
-                  <h4 className="font-medium text-foreground mb-2">2. View Profiles</h4>
+                  <h4 className="font-medium text-foreground mb-2">3. View Profiles</h4>
                   <p className="text-sm text-muted-foreground">Check reviews, photos, pricing, and availability</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon name="MessageCircle" size={24} color="white" />
                   </div>
-                  <h4 className="font-medium text-foreground mb-2">3. Connect Direct</h4>
+                  <h4 className="font-medium text-foreground mb-2">4. Connect Direct</h4>
                   <p className="text-sm text-muted-foreground">Chat, call, or request a quote directly from your chosen tradie</p>
                 </div>
               </div>
